@@ -20,6 +20,11 @@
 
 Console.Write("Enter the number:");
 int N = Convert.ToInt32(Console.ReadLine());
+if (N>100 && N<=999)
+{
+int thirdNumber1 = N % 10;
+Console.WriteLine("The tird number is " + thirdNumber1);
+}
 if (N<100)
 {
 Console.Write("Third number doesn't exist");
@@ -32,9 +37,4 @@ N = N/10;
 int thirdNumber2 = N % 10;
 Console.WriteLine("The tird number is " + thirdNumber2);
 }
-}
-if (N>100 && N<=999)
-{
-int thirdNumber1 = N % 10;
-Console.WriteLine("The tird number is " + thirdNumber1);
 }
