@@ -20,18 +20,21 @@
 
 Console.Write("Enter the number:");
 int N = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(N);
 if (N<100)
 {
 Console.Write("Third number doesn't exist");
 }
-else if (N>999) //Примечания: с использованием while вместо if, консоль выводит все значения остатков от деления, пока число на станет третьего разряда
+else if (N>999) 
 {
-while (N>999) //если после ИФ не поставить ВАЙЛ, то консоль закончит программу выводом остатка от первого деления числа
+while (N>999) 
 N = N/10;
 {
-int thirdNumber = N % 10;
-Console.WriteLine("The tird number is " + thirdNumber);
+int thirdNumber2 = N % 10;
+Console.WriteLine("The tird number is " + thirdNumber2);
 }
 }
-
+if (N>100 && N<=999)
+{
+int thirdNumber1 = N % 10;
+Console.WriteLine("The tird number is " + thirdNumber1);
+}
