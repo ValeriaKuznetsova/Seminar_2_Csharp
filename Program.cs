@@ -18,23 +18,37 @@
 
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
+// Console.Write("Enter the number:");
+// int N = Convert.ToInt32(Console.ReadLine());
+// if (N>100 && N<=999)
+// {
+// int thirdNumber1 = N % 10;
+// Console.WriteLine("The tird number is " + thirdNumber1);
+// }
+// if (N<100)
+// {
+// Console.Write("Third number doesn't exist");
+// }
+// else if (N>999) 
+// {
+// while (N>999) 
+// N = N/10;
+// {
+// int thirdNumber2 = N % 10;
+// Console.WriteLine("The tird number is " + thirdNumber2);
+// }
+// }
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
 Console.Write("Enter the number:");
-int N = Convert.ToInt32(Console.ReadLine());
-if (N>100 && N<=999)
+int Day = Convert.ToInt32(Console.ReadLine());
+int holyday = Day % 7;
+if (holyday == 0 || holyday == 6)
 {
-int thirdNumber1 = N % 10;
-Console.WriteLine("The tird number is " + thirdNumber1);
+Console.WriteLine($"The {Day} is holiday!!!");
 }
-if (N<100)
+else
 {
-Console.Write("Third number doesn't exist");
-}
-else if (N>999) 
-{
-while (N>999) 
-N = N/10;
-{
-int thirdNumber2 = N % 10;
-Console.WriteLine("The tird number is " + thirdNumber2);
-}
+Console.WriteLine("Working day.");
 }
